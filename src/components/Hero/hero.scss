@@ -1,0 +1,68 @@
+@import "../../App.scss";
+
+.hero {
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg, hsl(231, 82%, 6%), hsl(231, 82%, 10%));
+    overflow: hidden;
+    position: relative;
+
+    .wrapper {
+        max-width: 1366px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .textContainer {
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        h2 {
+            z-index: 999;
+            font-size: 30px;
+            color: rebeccapurple;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 88px;
+            letter-spacing: 2px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 40px;
+
+            a {
+                z-index: 999;
+                padding: 20px;
+                border: 1px solid white;
+                background-color: transparent;
+                border-radius: 10px;
+                color: hsl(231, 82%, 99%);
+                cursor: pointer;
+                font-weight: 300;
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    .slidingTextContainer {
+        width: 50%;
+        position: absolute;
+        font-size: 50vh;
+        bottom: -140px;
+        white-space: nowrap;
+        color: hsla(228, 100%, 2%, 0.233);
+        font-weight: bold;
+    }
+}
