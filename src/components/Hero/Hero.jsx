@@ -1,6 +1,6 @@
 import "./hero.scss";
 
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const textVariants = {
     initial: {
@@ -40,7 +40,7 @@ const sliderVariants = {
 
 const Hero = () => {
     return (
-        <div className='hero'>112312
+        <div className='hero'>
             <div className='wrapper'>
                 <motion.div
                     className='textContainer'
