@@ -2,7 +2,9 @@
 
 .hero {
     height: calc(100vh - 100px);
-    background: linear-gradient(180deg, hsl(231, 82%, 6%), hsl(231, 82%, 10%));
+    background: linear-gradient(180deg, hsl(231, 82%, 6%), hsl(231, 82%, 15%));
+    background-size: cover;
+    
     overflow: hidden;
     position: relative;
 
@@ -25,7 +27,7 @@
         h2 {
             z-index: 999;
             font-size: 30px;
-            color: rebeccapurple;
+            color: rgb(68, 0, 255);
             letter-spacing: 10px;
             text-transform: uppercase;
         }
