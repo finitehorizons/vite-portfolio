@@ -1,0 +1,139 @@
+.services {
+    background: linear-gradient(180deg, hsl(231, 82%, 6%), hsl(231, 82%, 15%));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .textContainer {
+        flex: 1;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        hr {
+            width: 500px;
+            border: none;
+            border-top: 0.5px solid gray;
+        }
+        p {
+            font-weight: 200;
+            font-size: 20px;
+            color: gray;
+            text-align: right;
+        }
+    }
+
+    .titleContainer {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            img {
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: 84px;
+                font-weight: 100;
+            }
+
+            button {
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                border: none;
+                background-color: orangered;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .listContainer {
+        display: flex;
+        flex: 2;
+        max-width: 1366px;
+        margin: auto;
+        gap: 100px;
+
+        .box {
+            padding-inline: 50px;
+            padding-block: 20px;
+            margin-bottom: 150px;
+            min-width: 400px;
+            border: 0.5px solid hsl(195, 53%, 79%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-wrap: balance;
+
+            .tech {
+                letter-spacing: 2px;
+            }
+
+            .wrapper {
+                padding-top: 2rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .section {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+
+                    div {
+                        display: flex;
+                    }
+
+                    .title {
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+
+                    .languages {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    p {
+                        color: rgb(210, 191, 255);
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+}
