@@ -1,0 +1,20 @@
+@import url("../../App.scss");
+
+.projects {
+    position: relative;
+
+    .progress {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-top: 50px;
+        text-align: center;
+        color: orangered;
+        font-size: 36px;
+
+        .progressBar {
+            height: 2px;
+            border: 2px solid hsl(195, 53%, 79%);
+        }
+    }
+}
