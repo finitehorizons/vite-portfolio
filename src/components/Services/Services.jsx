@@ -1,31 +1,55 @@
+import { useRef } from "react";
 import "./services.scss";
 
-import { motion } from "framer-motion";
+import { useInView, motion } from "framer-motion";
+
+const variants = {
+    initial: {
+        x: -500,
+        y: 100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.1,
+        },
+    },
+};
 
 const Services = () => {
+    const ref = useRef();
+
+    const isInView = useInView(ref, { margin: "-200px" });
+
     return (
-        <motion.div className='services'>
+        <motion.div
+            className='services'
+            variants={variants}
+            initial='initial'
+            // whileInView='animate'
+            ref={ref}
+            animate={isInView && "animate"}>
             <motion.div className='textContainer'>
                 <p>
-                    I build things for the web
+                    I build things for the web.
                     <br />
-                    beautiful, modern, simple
+                    modern. simple. beautiful.
                 </p>
                 <hr />
             </motion.div>
-            <motion.div className='titleContainer'>
+            <motion.div className='titleContainer' variants={variants}>
                 <div className='title'>
                     <h1>
-                        <b>Limitless</b> Possibilities
+                        <motion.b whileHover={{color: "orangered"}}>Limitless</motion.b> Possibilities
                     </h1>
-                </div>
-                <div className='title'>
-                    <h1>
-                        <b></b>
-                    </h1>
+                    <h4>Technologies, Frameworks and Tools</h4>
                 </div>
             </motion.div>
-            <motion.div className='listContainer'>
+            <motion.div className='listContainer' variants={variants}>
                 <motion.div
                     whileHover={{
                         background: "#060E3C",
@@ -33,11 +57,10 @@ const Services = () => {
                     }}
                     className='box'>
                     <img src='/source.png' alt='source' />
-                    <h2 className='tech'>Frontend Development</h2>
+                    <h2 className='tech'>FRONT END</h2>
 
                     <div className='wrapper'>
                         <div className='section'>
-                            <p className='title'>Languages:</p>
                             <ul className='languages'>
                                 <li>
                                     <img src='/html.png' alt='' />
@@ -72,27 +95,6 @@ const Services = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className='section'>
-                            <p className='title'>Tools I Use:</p>
-                            <ul className='languages'>
-                                <li>
-                                    <img src='/vscode.png' alt='' />
-                                    <p>VS Code</p>
-                                </li>
-                                <li>
-                                    <img src='/jetbrains.png' alt='' />
-                                    <p>Webstorm</p>
-                                </li>
-                                <li>
-                                    <img src='github2.png' alt='' />
-                                    <p>Github</p>
-                                </li>
-                                <li>
-                                    <img src='figma.png' alt='' />
-                                    <p>Figma</p>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </motion.div>
                 <motion.div
@@ -101,12 +103,12 @@ const Services = () => {
                         filter: "brightness(1.9)",
                     }}
                     q
-                    className='box'>
+                    className='box'
+                    variants={variants}>
                     <img src='/db96.png' alt='' />
-                    <h2 className='tech'> Backend Development</h2>
+                    <h2 className='tech'> BACKEND </h2>
                     <div className='wrapper'>
                         <div className='section'>
-                            <p className='title'>Languages:</p>
                             <ul className='languages'>
                                 <li>
                                     <img src='/python.png' alt='' />
@@ -118,45 +120,66 @@ const Services = () => {
                                     <p>NodeJS</p>
                                 </li>
                                 <li>
-                                    <img src='/react.png' alt='' />
+                                    <img src='/mongo.png' alt='' />
                                     <p>MongoDB</p>
                                 </li>
                                 <li>
-                                    <img src='/next.png' alt='' />
-                                    <p>NextJS</p>
+                                    <img src='/mysql.png' alt='' />
+                                    <p>MySQL</p>
                                 </li>
                             </ul>
                             <ul className='languages'>
                                 <li>
-                                    <img src='/css.png' alt='' />
-                                    <p>CSS</p>
-                                </li>
-                                <li>
-                                    <img src='sass.png' alt='' />
-                                    <p>Sass</p>
-                                </li>
-                                <li>
-                                    <img src='tailwind.png' alt='' />
-                                    <p>Tailwind</p>
+                                    <img src='/icons8-django-64.png' alt='' />
+                                    <p>Django</p>
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    whileHover={{
+                        background: "#060E3C",
+                        filter: "brightness(1.9)",
+                    }}
+                    q
+                    className='box'
+                    variants={variants}>
+                    <img src='/tool96.png' alt='' />
+                    <h2 className='tech'> Tools </h2>
+                    <div className='wrapper'>
                         <div className='section'>
-                            <p className='title'>Tools I Use:</p>
                             <ul className='languages'>
                                 <li>
-                                    <img src='/aws.png' alt='' />
-                                    <p>AWS</p>
+                                    <img src='/vscode.png' alt='' />
+                                    <p>VS Code</p>
                                 </li>
                                 <li>
                                     <img src='/pycharm.png' alt='' />
                                     <p>Pycharm</p>
                                 </li>
                                 <li>
+                                    <img src='/jetbrains.png' alt='' />
+                                    <p>Webstorm</p>
+                                </li>
+                                <li>
+                                    <img src='/aws.png' alt='' />
+                                    <p>AWS</p>
+                                </li>
+                            </ul>
+                            <ul className='languages'>
+                                <li>
+                                    <img src='/github2.png' alt='' />
+                                    <p>Github</p>
+                                </li>
+                                <li>
+                                    <img src='/figma.png' alt='' />
+                                    <p>Figma</p>
+                                </li>
+                                <li>
                                     <img src='source.png' alt='' />
                                     <p>Terminal</p>
                                 </li>
-                                <li></li>
                             </ul>
                         </div>
                     </div>
