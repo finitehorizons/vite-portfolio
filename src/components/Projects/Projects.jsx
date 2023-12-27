@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
-import "./projects.scss"
+import "./projects.scss";
 
 const items = [
     {
@@ -31,7 +31,31 @@ const items = [
 ];
 
 const Single = ({ item }) => {
-    return <section>{item.title}</section>;
+    const ref = useRef();
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        // offset: ["start start", "end start"],
+    });
+
+    const y = useTransform(scrollYProgress, [0, 1], [-400, 400]);
+
+    return (
+        <section>
+            <div className='container'>
+                <div className='wrapper'>
+                    <div className='imageContainer' ref={ref}>
+                        <img src={item.img} alt='item' />
+                    </div>
+                    <motion.div className='textContainer' style={{ y }}>
+                        <h2>{item.title}</h2>
+                        <p>{item.desc}</p>
+                        <button>See Demo</button>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
 };
 
 const Projects = () => {
@@ -51,7 +75,9 @@ const Projects = () => {
         <div className='projects' ref={ref}>
             <div className='progress'>
                 <h1>Featured Works</h1>
-                <motion.div className='progressBar' style={{scaleX}}></motion.div>
+                <motion.div
+                    className='progressBar'
+                    style={{ scaleX }}></motion.div>
             </div>
             {items.map((item) => (
                 <Single item={item} key={item.id} />
