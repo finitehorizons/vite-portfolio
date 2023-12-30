@@ -16,11 +16,21 @@
             padding: 20px;
         }
 
+        @include desktop {
+            justify-content: flex-end;
+            padding: 20px;
+        }
+  
         span {
             font-weight: bold;
 
             @include mobile {
                 display: none;
+            }
+
+            @include desktop {
+                display: none;
+
             }
         }
 
