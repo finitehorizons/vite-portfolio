@@ -31,7 +31,7 @@ const Services = () => {
                 className='services'
                 variants={variants}
                 initial='initial'
-                // whileInView='animate'
+                whileInView='animate'
                 ref={ref}
                 animate={"animate"}>
                 <motion.div className='textContainer'>
@@ -46,9 +46,9 @@ const Services = () => {
                     <div className='title'>
                         <h1>
                             <motion.b whileHover={{ color: "orangered" }}>
-                                Limitless
+                                Tools
                             </motion.b>{" "}
-                            Possibilities
+                            I have Worked With
                         </h1>
                         <h4>Technologies, Frameworks and Tools</h4>
                     </div>
@@ -60,7 +60,7 @@ const Services = () => {
                             filter: "brightness(1.9)",
                         }}
                         className='box'>
-                        <img className="desc" src='/source.png' alt='source' />
+                        <img className='desc' src='/source.png' alt='source' />
                         <h2 className='tech'>FRONT END</h2>
 
                         <div className='wrapper'>
@@ -109,7 +109,7 @@ const Services = () => {
                         q
                         className='box'
                         variants={variants}>
-                        <img className="desc" src='/db96.png' alt='' />
+                        <img className='desc' src='/db96.png' alt='' />
                         <h2 className='tech'> BACKEND </h2>
                         <div className='wrapper'>
                             <div className='section'>
@@ -152,7 +152,7 @@ const Services = () => {
                         q
                         className='box'
                         variants={variants}>
-                        <img className="desc" src='/tool96.png' alt='' />
+                        <img className='desc' src='/tool96.png' alt='' />
                         <h2 className='tech'> TOOLS </h2>
                         <div className='wrapper'>
                             <div className='section'>
