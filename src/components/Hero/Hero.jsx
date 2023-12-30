@@ -51,7 +51,7 @@ const Hero = () => {
                         Christopher Goodwin
                     </motion.h2>
                     <motion.h1 variants={textVariants}>
-                        Full Stack Developer
+                        Web Developer | UX Enthusiast
                     </motion.h1>
                     <div className='buttons'>
                         <motion.a variants={textVariants} href='#Portfolio'>
@@ -68,14 +68,19 @@ const Hero = () => {
                         animate='scrollAnimation'
                     />
                 </motion.div>
-                <motion.div
-                    className='slidingTextContainer'
-                    variants={sliderVariants}
-                    initial='initial'
-                    animate='animate'>
-                    Front-End | Back-End | UX | UI | Passionate | Self-Starter
+                <motion.div className="aboutTextContainer">
+                <h2>Hello World</h2>
+                <p>About me Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi, nam tenetur earum, aliquam illo minus dolorum eaque ullam distinctio qui molestias. Consequatur nemo labore ullam fugit voluptas maiores incidunt.</p>
+
                 </motion.div>
             </div>
+            <motion.div
+                className='slidingTextContainer'
+                variants={sliderVariants}
+                initial='initial'
+                animate='animate'>
+                Front-End | Back-End | UX | UI | Passionate | Self-Starter
+            </motion.div>
         </div>
     );
 };
