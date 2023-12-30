@@ -4,9 +4,12 @@
     height: calc(100vh - 100px);
     background: linear-gradient(180deg, hsl(231, 82%, 6%), hsl(231, 82%, 15%));
     background-size: cover;
-    
     overflow: hidden;
     position: relative;
+
+    @include mobile {
+        padding-top: 10rem;
+    }
 
     .wrapper {
         max-width: 1366px;
