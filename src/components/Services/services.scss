@@ -131,6 +131,10 @@
             flex-direction: column;
         }
 
+        @include tablet {
+            gap: 25px;
+        }
+
         .box {
             padding-top: 75px;
             margin-bottom: 150px;
@@ -146,12 +150,21 @@
                 @include mobile {
                     display: none;
                 }
+
+                @include tablet {
+                    display: none;
+                }
             }
 
             @include mobile {
                 margin-bottom: 15px;
                 padding-top: 20px;
                 min-height: 200px;
+            }
+
+            @include tablet {
+                min-height: 400px;
+                padding-top: 40px;
             }
 
             .tech {
@@ -163,6 +176,10 @@
                     margin-top: 0.5rem;
                     letter-spacing: normal;
                     font-size: 20px;
+                }
+
+                @include tablet {
+                    margin-top: 1rem;
                 }
             }
 
@@ -198,6 +215,10 @@
 
                         @include mobile {
                             // margin-top: -10px;
+                        }
+
+                        @include tablet {
+                            gap: 15px;
                         }
                     }
                     p {
