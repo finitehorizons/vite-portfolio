@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Javascript",
+        "icon": "/js.png"
+    },
+    {
+        "name": "HTML",
+        "icon": "/html.png"
+    },
+    {
+        "name": "CSS",
+        "icon": "/css.png"
+    },
+    {
+        "name": "React",
+        "icon": "/react.png"
+    },
+    {
+        "name": "NextJS",
+        "icon": "/next.png"
+    },
+    {
+        "name": "TailwindCSS",
+        "icon": "/tailwind.png"
+    },
+    {
+        "name": "SASS",
+        "icon": "/sass.png"
+    },
+    {
+        "name": "Node",
+        "icon": "/node.png"
+    },
+    {
+        "name": "MongoDB",
+        "icon": "/mongo.png"
+    },
+    {
+        "name": "MySQL",
+        "icon": "/mysql.png"
+    },
+    {
+        "name": "Python",
+        "icon": "/python.png"
+    },
+    {
+        "name": "VSCode",
+        "icon": "/vscode.png"
+    },
+    {
+        "name": "Webstorm",
+        "icon": "/jetbrains.png"
+    },
+    {
+        "name": "Pycharm",
+        "icon": "/pycharm.png"
+    },
+    {
+        "name": "Figma",
+        "icon": "/figma.png"
+    }
+]
