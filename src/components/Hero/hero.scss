@@ -8,7 +8,7 @@
     position: relative;
 
     @include mobile {
-        padding-top: 10rem;
+        padding-top: 2rem;
     }
 
     .wrapper {
@@ -18,13 +18,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2rem;
+        gap: 10rem;
 
         @include tablet {
+            margin-top: 150px;
             flex-direction: column;
             gap: 6rem;
             text-align: center;
+        }
 
+        @include mobile {
+            margin-top: 0;
         }
     }
 
@@ -36,45 +40,57 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 40px;
-        flex: 2;
+        gap: 20px;
+        flex: 1;
 
         @include mobile {
             height: 50%;
             width: 100%;
-            gap: 20px;
+            gap: 0;
             align-items: center;
             text-align: center;
         }
 
         h2 {
             z-index: 999;
-            font-size: 64px;
-            color: rgb(68, 0, 255);
+            font-size: 90px;
+            color: hsl(231, 82%, 90%);
             letter-spacing: 5px;
-            text-transform: uppercase;
+            text-align: center;
+            line-height: 120px;
+
+            @include mobile {
+                font-size: 40px;
+
+                br {
+                    display: none;
+                }
+            }
         }
 
         h1 {
-            font-size: 52px;
+            font-size: 48px;
             letter-spacing: 2px;
+            text-align: center;
+            line-height: 90px;
+            color: hsl(231, 82%, 90%);
 
             @include mobile {
                 font-size: 36px;
+                min-height: 100px;
             }
         }
 
         .buttons {
             display: flex;
-            gap: 40px;
-
+            gap: 10rem;
             a {
                 z-index: 999;
                 padding: 20px;
                 border: 1px solid white;
                 background-color: transparent;
                 border-radius: 10px;
-                color: hsl(231, 82%, 99%);
+                color: hsl(231, 82%, 90%);
                 cursor: pointer;
                 font-weight: 300;
             }
@@ -87,17 +103,30 @@
 
     .aboutTextContainer {
         flex: 1;
-        max-width: 600px;
-        width: 100%;
+        display: flex;
         padding-bottom: 10rem;
         text-wrap: balance;
-        
+        font-size: 24px;
+        margin-right: 2rem;
+        letter-spacing: 0.5px;
+        margin: auto;
+        color: hsl(0, 0%, 72%);
+        text-align: center;
+
+        span {
+            color: hsl(231, 82%, 99%);
+            font-weight: bold;
+        }
+
+        @include mobile {
+            font-size: 18px;
+        }
     }
 
     .slidingTextContainer {
         width: 50%;
         position: absolute;
-        font-size: 50vh;
+        font-size: 40vh;
         bottom: -140px;
         white-space: nowrap;
         color: hsla(228, 100%, 2%, 0.233);
