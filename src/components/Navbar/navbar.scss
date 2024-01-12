@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@import "../../App.scss";
 
 .navbar {
     height: 100px;
@@ -20,7 +20,7 @@
             justify-content: flex-end;
             padding: 20px;
         }
-  
+
         span {
             font-weight: bold;
 
@@ -30,7 +30,6 @@
 
             @include desktop {
                 display: none;
-
             }
         }
 
