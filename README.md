@@ -2,6 +2,13 @@
 
 Created using Vite + React + Framer Motion + SCSS
 
-## Contact Me
-  [Github](www.github.com/finitehorizons)
-  [Linked In](https://www.linkedin.com/in/finitehorizons/)
+<h2>Contact Me</h2>
+
+<ul>
+  <li>
+    <a href="https://www.github.com/finitehorizons">Github</a>
+  </li>
+  <li>
+        <a href="https://www.linkedin.com/in/finitehorizons/">LinkedIn</a>
+  </li>
+</ul>
